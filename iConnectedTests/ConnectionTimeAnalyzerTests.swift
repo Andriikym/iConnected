@@ -8,8 +8,9 @@ import XCTest
 @testable import iConnected
 
 class ConnectionTimeAnalyzerTests: XCTestCase {
-    let excellentBorder = 0.5
-    let poorBorder = 1.0
+    let excellentBorder = 0.25
+    let goodBorder = 0.5
+    let poorBorder = 1.5
     
     var sut: ConnectionTimeAnalyzer!
     var input: [CFAbsoluteTime?]!
@@ -37,7 +38,7 @@ class ConnectionTimeAnalyzerTests: XCTestCase {
         XCTAssertEqual(result, .absent, "Should have absent result")
     }
     
-    func testLostsQualityAnalyze() {
+    func testLostPacketsQualityAnalyze() {
         input = [excellentBorder, nil, excellentBorder]
         result = sut.analyze(input)
         XCTAssertEqual(result, .poor, "Should have poor result")
@@ -49,14 +50,32 @@ class ConnectionTimeAnalyzerTests: XCTestCase {
         XCTAssertEqual(result, .poor, "Should have poor result")
     }
     
+    func testSlowQualityAnalyze() {
+        input = [excellentBorder + 0.01, excellentBorder - 0.01, poorBorder]
+        result = sut.analyze(input)
+        XCTAssertEqual(result, .slow, "Should have slow result")
+    }
+    
+    func testBarelySlowQualityAnalyze() {
+        input = [excellentBorder + 0.01, excellentBorder - 0.01, goodBorder + 0.01]
+        result = sut.analyze(input)
+        XCTAssertEqual(result, .slow, "Should have slow result")
+    }
+    
     func testGoodQualityAnalyze() {
-        input = [excellentBorder + 0.01, excellentBorder - 0.1, poorBorder]
+        input = [excellentBorder + 0.01, excellentBorder - 0.01, excellentBorder]
+        result = sut.analyze(input)
+        XCTAssertEqual(result, .good, "Should have good result")
+    }
+    
+    func testBarelyGoodQualityAnalyze() {
+        input = [excellentBorder + 0.01, goodBorder - 0.01, goodBorder]
         result = sut.analyze(input)
         XCTAssertEqual(result, .good, "Should have good result")
     }
     
     func testExcellentQualityAnalyze() {
-        input = [excellentBorder, excellentBorder - 0.2, excellentBorder - 0.1]
+        input = [excellentBorder, excellentBorder - 0.5, excellentBorder - 0.01]
         result = sut.analyze(input)
         XCTAssertEqual(result, .excelent, "Should have excellent result")
     }

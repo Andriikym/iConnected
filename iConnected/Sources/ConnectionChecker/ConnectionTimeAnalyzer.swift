@@ -25,10 +25,12 @@ struct ConnectionTimeAnalyzer: ConnectionTimeAnalyzing {
         if nullTimes.count >= 1 { return .poor }
         
         switch maxTime {
-        case 0...0.5:
+        case 0...0.25:
             return .excelent
-        case 0.5...1:
+        case 0.25...0.5:
             return .good
+        case 0.5...1.5:
+            return .slow
         default:
             return .poor
         }

@@ -16,7 +16,7 @@ protocol TimeMeasuring {
 ///
 /// Usage: Create the instance at required starting time. When time need to be measured call for
 /// **measure()**
-class TimeMeasurer: TimeMeasuring {
+final class TimeMeasurer: TimeMeasuring {
     typealias TimeProvider = () -> (CFAbsoluteTime)
     
     // MARK: - Private properties

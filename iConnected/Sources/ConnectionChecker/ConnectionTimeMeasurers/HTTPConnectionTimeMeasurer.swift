@@ -6,16 +6,8 @@
 
 import Foundation
 
-typealias TimeMeasureCompletion = (CFTimeInterval?) -> ()
-
 /// Measures connection timing
-protocol ConnectionTimeMeasuring {
-    /// Starts to measure connection time
-    func performMeasure(completion: @escaping TimeMeasureCompletion)
-}
-
-/// Measures connection timing
-class ConnectionTimeMeasurer: ConnectionTimeMeasuring {
+final class HTTPConnectionTimeMeasurer: ConnectionTimeMeasuring {
 
     // MARK: - Private properties
 
@@ -24,7 +16,7 @@ class ConnectionTimeMeasurer: ConnectionTimeMeasuring {
         configuration.httpCookieAcceptPolicy = .never
         configuration.httpShouldSetCookies = false
         configuration.httpCookieStorage = nil
-        configuration.timeoutIntervalForRequest = 30
+        configuration.timeoutIntervalForRequest = 3
         configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         configuration.urlCache = nil
         configuration.httpShouldUsePipelining = false
@@ -35,7 +27,7 @@ class ConnectionTimeMeasurer: ConnectionTimeMeasuring {
     
     // MARK: - Public
 
-    /// Starts to measure connection time
+    /// Starts to measure connection time. Consider nil result as timeout or error.
     func performMeasure(completion: @escaping TimeMeasureCompletion) {
         let url = URL(string: "https://google.com")!
         var request = URLRequest(url: url)
@@ -54,12 +46,3 @@ class ConnectionTimeMeasurer: ConnectionTimeMeasuring {
     }
 }
 
-class MockConnectionTimeMeasurer: ConnectionTimeMeasuring {
-    func performMeasure(completion: @escaping TimeMeasureCompletion) {
-        DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
-            let range = 0.1...0.5
-            let result = Double.random(in: range)
-            completion(result)
-        }
-    }
-}

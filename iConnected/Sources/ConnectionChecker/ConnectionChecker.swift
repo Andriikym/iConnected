@@ -10,6 +10,7 @@ import Foundation
 enum ConnectionQuality: String {
     case absent
     case poor
+    case slow
     case good
     case excelent
 }
@@ -21,7 +22,7 @@ protocol ConnectionChecking {
     func abort()
 }
 
-protocol ConnectionCheckerDelegate {
+protocol ConnectionCheckerDelegate: AnyObject {
     func connectionCheckerDidStart(_ instance: ConnectionChecking)
     func connectionCheckerDidFinish(result: ConnectionQuality?, instance: ConnectionChecking)
     func connectionCheckerDidUpdate(progress: Int, instance: ConnectionChecking)
@@ -39,7 +40,7 @@ class ConnectionChecker: ConnectionChecking {
 
     // MARK: - Public properties
 
-    var delegate: ConnectionCheckerDelegate?
+    weak var delegate: ConnectionCheckerDelegate?
         
     // MARK: - Public
 
@@ -57,7 +58,7 @@ class ConnectionChecker: ConnectionChecking {
     // MARK: - Private
 
     private func performMeasure() {
-        qualityMeasurer = ConnectionQualityMeasurer(timeMeasurer: ConnectionTimeMeasurer(),
+        qualityMeasurer = ConnectionQualityMeasurer(timeMeasurer: ICMPConnectionTimeMeasurer(),
                                                     timeAnalyzer: ConnectionTimeAnalyzer()) { [weak self] result in
             guard let self = self else { return }
 
