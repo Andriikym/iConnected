@@ -17,6 +17,7 @@ enum ConnectionQuality: String {
 
 protocol ConnectionChecking {
     var delegate: ConnectionCheckerDelegate? { get set }
+    var inProgress: Bool { get }
     
     func start()
     func abort()

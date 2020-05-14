@@ -11,12 +11,17 @@ class ViewController: UIViewController, ConnectionCheckerDelegate {
 
     @IBOutlet weak var infoLabel: UILabel!
     
-    var checker = ConnectionChecker()
-
+    lazy var checker: ConnectionChecker = {
+        let result = ConnectionChecker()
+        result.delegate = self
+        return result
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        checker.delegate = self
+        if checker.inProgress {
+            infoLabel?.text = "Checking"
+        }
     }
     
     @IBAction func go() {
@@ -31,12 +36,13 @@ class ViewController: UIViewController, ConnectionCheckerDelegate {
         
     }
     
+    
     func connectionCheckerDidStart(_ instance: ConnectionChecking) {
-          infoLabel.text = "Checking"
+          infoLabel?.text = "Checking"
     }
     
     func connectionCheckerDidFinish(result: ConnectionQuality?, instance: ConnectionChecking) {
-        infoLabel.text = result?.rawValue ?? "Aborted"
+        infoLabel?.text = result?.rawValue ?? "Aborted"
     }
     
     func connectionCheckerDidUpdate(progress: Int, instance: ConnectionChecking) {
@@ -44,3 +50,27 @@ class ViewController: UIViewController, ConnectionCheckerDelegate {
     }
 }
 
+extension ViewController: ShortcutActions {
+    func requestToPerformCheck() {
+        go()
+    }
+}
+
+
+class MockChecker: ConnectionChecking {
+    var inProgress: Bool = false
+    var delegate: ConnectionCheckerDelegate?
+    
+    var index = 0
+    
+    func start() {
+        index += 1
+        print("check started - \(index)")
+    }
+    
+    func abort() {
+        print("check aborted")
+    }
+    
+    
+}

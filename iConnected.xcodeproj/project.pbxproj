@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620D1E23246C68F1006B957D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 620D1E1D246C68DB006B957D /* Localizable.strings */; };
+		620D1E24246C68F4006B957D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 620D1E1F246C68DB006B957D /* InfoPlist.strings */; };
+		620D1E26246D64FD006B957D /* Localization+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D1E25246D64FD006B957D /* Localization+Extensions.swift */; };
+		620D1E28246D6587006B957D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620D1E27246D6587006B957D /* Main.storyboard */; };
 		62397D2624631E4B00480940 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 62397D2524631E4B00480940 /* SimplePing.m */; };
 		62A0C4F124570AFA00EB4C66 /* HTTPConnectionTimeMeasurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C4F024570AFA00EB4C66 /* HTTPConnectionTimeMeasurer.swift */; };
 		62A0C4F32457143700EB4C66 /* ConnectionTimeAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C4F22457143700EB4C66 /* ConnectionTimeAnalyzer.swift */; };
@@ -21,7 +25,6 @@
 		62DFE44F2449FF4E00B34042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE44E2449FF4E00B34042 /* AppDelegate.swift */; };
 		62DFE4512449FF4E00B34042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE4502449FF4E00B34042 /* SceneDelegate.swift */; };
 		62DFE4532449FF4E00B34042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE4522449FF4E00B34042 /* ViewController.swift */; };
-		62DFE4562449FF4E00B34042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DFE4542449FF4E00B34042 /* Main.storyboard */; };
 		62DFE4582449FF4F00B34042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DFE4572449FF4F00B34042 /* Assets.xcassets */; };
 		62DFE45B2449FF4F00B34042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DFE4592449FF4F00B34042 /* LaunchScreen.storyboard */; };
 		62FA00A0245083C300C57B2F /* ConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FA009F245083C300C57B2F /* ConnectionChecker.swift */; };
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		620D1E1E246C68DB006B957D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		620D1E20246C68DB006B957D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		620D1E21246C68DB006B957D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		620D1E22246C68DB006B957D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		620D1E25246D64FD006B957D /* Localization+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localization+Extensions.swift"; sourceTree = "<group>"; };
+		620D1E27246D6587006B957D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		62397D2224631CDB00480940 /* ConnectionChecker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConnectionChecker-Bridging-Header.h"; sourceTree = "<group>"; };
 		62397D2424631E4A00480940 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		62397D2524631E4B00480940 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
@@ -56,7 +65,6 @@
 		62DFE44E2449FF4E00B34042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DFE4502449FF4E00B34042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		62DFE4522449FF4E00B34042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		62DFE4552449FF4E00B34042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62DFE4572449FF4F00B34042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62DFE45A2449FF4F00B34042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62DFE45C2449FF4F00B34042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +89,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		620D1E1B246C6876006B957D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				620D1E1C246C68DB006B957D /* Localization */,
+				62DFE4572449FF4F00B34042 /* Assets.xcassets */,
+				62DFE4592449FF4F00B34042 /* LaunchScreen.storyboard */,
+				62DFE45C2449FF4F00B34042 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		620D1E1C246C68DB006B957D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				620D1E1D246C68DB006B957D /* Localizable.strings */,
+				620D1E1F246C68DB006B957D /* InfoPlist.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		62397D2324631CE700480940 /* SimplePing */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,16 +126,6 @@
 				62A0C5142457244E00EB4C66 /* TimeCounterTests.swift */,
 			);
 			path = iConnectedTests;
-			sourceTree = "<group>";
-		};
-		62A0C51A24587E3100EB4C66 /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				62DFE4572449FF4F00B34042 /* Assets.xcassets */,
-				62DFE4592449FF4F00B34042 /* LaunchScreen.storyboard */,
-				62DFE45C2449FF4F00B34042 /* Info.plist */,
-			);
-			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		62A0C51B24587FF900EB4C66 /* ConnectionChecker */ = {
@@ -156,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				62FA009E2450839E00C57B2F /* Sources */,
-				62A0C51A24587E3100EB4C66 /* SupportingFiles */,
+				620D1E1B246C6876006B957D /* Supporting Files */,
 			);
 			path = iConnected;
 			sourceTree = "<group>";
@@ -164,12 +182,13 @@
 		62FA009E2450839E00C57B2F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				62DFE44E2449FF4E00B34042 /* AppDelegate.swift */,
-				62DFE4502449FF4E00B34042 /* SceneDelegate.swift */,
-				62DFE4522449FF4E00B34042 /* ViewController.swift */,
-				62DFE4542449FF4E00B34042 /* Main.storyboard */,
 				62A0C51B24587FF900EB4C66 /* ConnectionChecker */,
 				62397D2324631CE700480940 /* SimplePing */,
+				620D1E25246D64FD006B957D /* Localization+Extensions.swift */,
+				62DFE44E2449FF4E00B34042 /* AppDelegate.swift */,
+				62DFE4502449FF4E00B34042 /* SceneDelegate.swift */,
+				620D1E27246D6587006B957D /* Main.storyboard */,
+				62DFE4522449FF4E00B34042 /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -240,6 +259,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 62DFE4422449FF4E00B34042;
 			packageReferences = (
@@ -267,8 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DFE45B2449FF4F00B34042 /* LaunchScreen.storyboard in Resources */,
+				620D1E28246D6587006B957D /* Main.storyboard in Resources */,
+				620D1E23246C68F1006B957D /* Localizable.strings in Resources */,
 				62DFE4582449FF4F00B34042 /* Assets.xcassets in Resources */,
-				62DFE4562449FF4E00B34042 /* Main.storyboard in Resources */,
+				620D1E24246C68F4006B957D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +318,7 @@
 				62B1B3D424698B5500BCD1F3 /* ICMPConnectionTimeMeasurer.swift in Sources */,
 				62DFE4512449FF4E00B34042 /* SceneDelegate.swift in Sources */,
 				62FA00A0245083C300C57B2F /* ConnectionChecker.swift in Sources */,
+				620D1E26246D64FD006B957D /* Localization+Extensions.swift in Sources */,
 				62A0C4F52457146A00EB4C66 /* TimeMeasurer.swift in Sources */,
 				62B1B3D6246C00BF00BCD1F3 /* AtomicStorage.swift in Sources */,
 				62B1B3D8246C038100BCD1F3 /* DummyConnectionTimeMeasurer.swift in Sources */,
@@ -315,12 +338,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		62DFE4542449FF4E00B34042 /* Main.storyboard */ = {
+		620D1E1D246C68DB006B957D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				62DFE4552449FF4E00B34042 /* Base */,
+				620D1E1E246C68DB006B957D /* en */,
+				620D1E21246C68DB006B957D /* ru */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		620D1E1F246C68DB006B957D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				620D1E20246C68DB006B957D /* en */,
+				620D1E22246C68DB006B957D /* ru */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		62DFE4592449FF4F00B34042 /* LaunchScreen.storyboard */ = {
@@ -491,7 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iConnected/Info.plist;
+				INFOPLIST_FILE = "iConnected/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,7 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iConnected/Info.plist;
+				INFOPLIST_FILE = "iConnected/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

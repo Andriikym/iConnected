@@ -6,16 +6,29 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private lazy var shortcutManager: ShortcutManager = {
+        print("Asked for manager")
+        let result = ShortcutManager()
+        result.delegate = self.window?.rootViewController as? ShortcutActions
+        return result
+    }()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        print("scene willConnectTo")
+        if let shortcutItem = connectionOptions.shortcutItem, let type = ShortcutManager.ShortcutItemType(rawValue: shortcutItem.type) {
+            shortcutManager.handleItem(type)
+        }
+    }
+    
+    func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        if let type = ShortcutManager.ShortcutItemType(rawValue: shortcutItem.type) {
+            shortcutManager.handleItem(type)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -48,4 +61,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
+protocol ShortcutActions: AnyObject {
+    func requestToPerformCheck()
+}
+
+class ShortcutManager {
+    weak var delegate: ShortcutActions?
+    
+    enum ShortcutItemType: String {
+        case check = "SHORTCUT_ITEM_TYPE_CHECK"
+    }
+    
+    func handleItem(_ item: ShortcutItemType) {
+        print("Ask to handle - \(item.rawValue)")
+        switch item {
+        case .check:
+            delegate?.requestToPerformCheck()
+        }
+    }
+}
+
+
+
 
