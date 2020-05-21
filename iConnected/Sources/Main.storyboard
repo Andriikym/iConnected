@@ -24,7 +24,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="title.main.screen.info"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="title.main_screen.info"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="3nf-dp-yLl">
@@ -34,7 +34,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
                                                 <state key="normal" title="Check connection"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="action.start.check"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="action.check.start"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="go" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2k-w2-3o2"/>
@@ -44,7 +44,7 @@
                                                 <rect key="frame" x="38" y="78" width="48" height="30"/>
                                                 <state key="normal" title="Cancel"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="action.cancel.check"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="action.check.cancel"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="stop" destination="BYZ-38-t0r" eventType="touchUpInside" id="Knv-9H-MCY"/>

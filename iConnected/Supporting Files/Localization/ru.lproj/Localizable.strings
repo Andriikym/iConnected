@@ -1,5 +1,5 @@
-"title.main.screen.info" = "Проверить качество соединения";
-"action.start.check" = "Проверить";
-"action.cancel.check" = "Отмена";
-
-
+"title.main_screen.info" = "Проверить качество соединения";
+"action.check.start" = "Проверить";
+"action.check.cancel"  = "Отмена";
+"title.main_screen.check_progress" = "Проверяем";
+"title.main_screen.check_canceled" = "Отменено";

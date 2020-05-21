@@ -1,3 +1,5 @@
-"title.main.screen.info" = "Connection quality control";
-"action.start.check" = "Check";
-"action.cancel.check" = "Cancel";
+"title.main_screen.info" = "Connection quality control";
+"action.check.start" = "Check";
+"action.check.cancel" = "Cancel";
+"title.main_screen.check_progress" = "Checking";
+"title.main_screen.check_canceled" = "Canceled";

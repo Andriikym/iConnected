@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,23 +11,12 @@
 		620D1E24246C68F4006B957D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 620D1E1F246C68DB006B957D /* InfoPlist.strings */; };
 		620D1E26246D64FD006B957D /* Localization+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D1E25246D64FD006B957D /* Localization+Extensions.swift */; };
 		620D1E28246D6587006B957D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620D1E27246D6587006B957D /* Main.storyboard */; };
-		62397D2624631E4B00480940 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 62397D2524631E4B00480940 /* SimplePing.m */; };
-		62A0C4F124570AFA00EB4C66 /* HTTPConnectionTimeMeasurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C4F024570AFA00EB4C66 /* HTTPConnectionTimeMeasurer.swift */; };
-		62A0C4F32457143700EB4C66 /* ConnectionTimeAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C4F22457143700EB4C66 /* ConnectionTimeAnalyzer.swift */; };
-		62A0C4F52457146A00EB4C66 /* TimeMeasurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C4F42457146A00EB4C66 /* TimeMeasurer.swift */; };
-		62A0C51324571A3D00EB4C66 /* ConnectionTimeAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C51224571A3D00EB4C66 /* ConnectionTimeAnalyzerTests.swift */; };
-		62A0C5152457244E00EB4C66 /* TimeCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C5142457244E00EB4C66 /* TimeCounterTests.swift */; };
-		62A0C51924587BFC00EB4C66 /* ConnectionQualityMeasurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C51824587BFC00EB4C66 /* ConnectionQualityMeasurer.swift */; };
-		62B1B3D424698B5500BCD1F3 /* ICMPConnectionTimeMeasurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1B3D324698B5500BCD1F3 /* ICMPConnectionTimeMeasurer.swift */; };
-		62B1B3D6246C00BF00BCD1F3 /* AtomicStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1B3D5246C00BF00BCD1F3 /* AtomicStorage.swift */; };
-		62B1B3D8246C038100BCD1F3 /* DummyConnectionTimeMeasurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1B3D7246C038100BCD1F3 /* DummyConnectionTimeMeasurer.swift */; };
-		62B1B3DB246C040F00BCD1F3 /* ConnectionTimeMeasuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1B3DA246C040F00BCD1F3 /* ConnectionTimeMeasuring.swift */; };
 		62DFE44F2449FF4E00B34042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE44E2449FF4E00B34042 /* AppDelegate.swift */; };
 		62DFE4512449FF4E00B34042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE4502449FF4E00B34042 /* SceneDelegate.swift */; };
 		62DFE4532449FF4E00B34042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE4522449FF4E00B34042 /* ViewController.swift */; };
 		62DFE4582449FF4F00B34042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DFE4572449FF4F00B34042 /* Assets.xcassets */; };
 		62DFE45B2449FF4F00B34042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DFE4592449FF4F00B34042 /* LaunchScreen.storyboard */; };
-		62FA00A0245083C300C57B2F /* ConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FA009F245083C300C57B2F /* ConnectionChecker.swift */; };
+		62F4D83C2477145D00EF1B23 /* ConnectionChecker in Frameworks */ = {isa = PBXBuildFile; productRef = 62F4D83B2477145D00EF1B23 /* ConnectionChecker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,20 +36,7 @@
 		620D1E22246C68DB006B957D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		620D1E25246D64FD006B957D /* Localization+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localization+Extensions.swift"; sourceTree = "<group>"; };
 		620D1E27246D6587006B957D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		62397D2224631CDB00480940 /* ConnectionChecker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConnectionChecker-Bridging-Header.h"; sourceTree = "<group>"; };
-		62397D2424631E4A00480940 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
-		62397D2524631E4B00480940 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
-		62A0C4F024570AFA00EB4C66 /* HTTPConnectionTimeMeasurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPConnectionTimeMeasurer.swift; sourceTree = "<group>"; };
-		62A0C4F22457143700EB4C66 /* ConnectionTimeAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTimeAnalyzer.swift; sourceTree = "<group>"; };
-		62A0C4F42457146A00EB4C66 /* TimeMeasurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMeasurer.swift; sourceTree = "<group>"; };
 		62A0C50824571A0400EB4C66 /* iConnectedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iConnectedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		62A0C51224571A3D00EB4C66 /* ConnectionTimeAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTimeAnalyzerTests.swift; sourceTree = "<group>"; };
-		62A0C5142457244E00EB4C66 /* TimeCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounterTests.swift; sourceTree = "<group>"; };
-		62A0C51824587BFC00EB4C66 /* ConnectionQualityMeasurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionQualityMeasurer.swift; sourceTree = "<group>"; };
-		62B1B3D324698B5500BCD1F3 /* ICMPConnectionTimeMeasurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICMPConnectionTimeMeasurer.swift; sourceTree = "<group>"; };
-		62B1B3D5246C00BF00BCD1F3 /* AtomicStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicStorage.swift; sourceTree = "<group>"; };
-		62B1B3D7246C038100BCD1F3 /* DummyConnectionTimeMeasurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyConnectionTimeMeasurer.swift; sourceTree = "<group>"; };
-		62B1B3DA246C040F00BCD1F3 /* ConnectionTimeMeasuring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTimeMeasuring.swift; sourceTree = "<group>"; };
 		62DFE44B2449FF4E00B34042 /* iConnected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iConnected.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DFE44E2449FF4E00B34042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DFE4502449FF4E00B34042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +44,6 @@
 		62DFE4572449FF4F00B34042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62DFE45A2449FF4F00B34042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62DFE45C2449FF4F00B34042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62FA009F245083C300C57B2F /* ConnectionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F4D83C2477145D00EF1B23 /* ConnectionChecker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,47 +85,11 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		62397D2324631CE700480940 /* SimplePing */ = {
-			isa = PBXGroup;
-			children = (
-				62397D2224631CDB00480940 /* ConnectionChecker-Bridging-Header.h */,
-				62397D2424631E4A00480940 /* SimplePing.h */,
-				62397D2524631E4B00480940 /* SimplePing.m */,
-			);
-			path = SimplePing;
-			sourceTree = "<group>";
-		};
 		62A0C50924571A0400EB4C66 /* iConnectedTests */ = {
 			isa = PBXGroup;
 			children = (
-				62A0C51224571A3D00EB4C66 /* ConnectionTimeAnalyzerTests.swift */,
-				62A0C5142457244E00EB4C66 /* TimeCounterTests.swift */,
 			);
 			path = iConnectedTests;
-			sourceTree = "<group>";
-		};
-		62A0C51B24587FF900EB4C66 /* ConnectionChecker */ = {
-			isa = PBXGroup;
-			children = (
-				62B1B3D9246C039E00BCD1F3 /* ConnectionTimeMeasurers */,
-				62FA009F245083C300C57B2F /* ConnectionChecker.swift */,
-				62A0C51824587BFC00EB4C66 /* ConnectionQualityMeasurer.swift */,
-				62A0C4F22457143700EB4C66 /* ConnectionTimeAnalyzer.swift */,
-				62A0C4F42457146A00EB4C66 /* TimeMeasurer.swift */,
-			);
-			path = ConnectionChecker;
-			sourceTree = "<group>";
-		};
-		62B1B3D9246C039E00BCD1F3 /* ConnectionTimeMeasurers */ = {
-			isa = PBXGroup;
-			children = (
-				62B1B3DA246C040F00BCD1F3 /* ConnectionTimeMeasuring.swift */,
-				62B1B3D7246C038100BCD1F3 /* DummyConnectionTimeMeasurer.swift */,
-				62A0C4F024570AFA00EB4C66 /* HTTPConnectionTimeMeasurer.swift */,
-				62B1B3D324698B5500BCD1F3 /* ICMPConnectionTimeMeasurer.swift */,
-				62B1B3D5246C00BF00BCD1F3 /* AtomicStorage.swift */,
-			);
-			path = ConnectionTimeMeasurers;
 			sourceTree = "<group>";
 		};
 		62DFE4422449FF4E00B34042 = {
@@ -182,8 +122,6 @@
 		62FA009E2450839E00C57B2F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				62A0C51B24587FF900EB4C66 /* ConnectionChecker */,
-				62397D2324631CE700480940 /* SimplePing */,
 				620D1E25246D64FD006B957D /* Localization+Extensions.swift */,
 				62DFE44E2449FF4E00B34042 /* AppDelegate.swift */,
 				62DFE4502449FF4E00B34042 /* SceneDelegate.swift */,
@@ -228,6 +166,7 @@
 			);
 			name = iConnected;
 			packageProductDependencies = (
+				62F4D83B2477145D00EF1B23 /* ConnectionChecker */,
 			);
 			productName = iConnected;
 			productReference = 62DFE44B2449FF4E00B34042 /* iConnected.app */;
@@ -263,6 +202,7 @@
 			);
 			mainGroup = 62DFE4422449FF4E00B34042;
 			packageReferences = (
+				62F4D83A2477145D00EF1B23 /* XCRemoteSwiftPackageReference "ConnectionChecker" */,
 			);
 			productRefGroup = 62DFE44C2449FF4E00B34042 /* Products */;
 			projectDirPath = "";
@@ -301,8 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A0C51324571A3D00EB4C66 /* ConnectionTimeAnalyzerTests.swift in Sources */,
-				62A0C5152457244E00EB4C66 /* TimeCounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,20 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A0C4F32457143700EB4C66 /* ConnectionTimeAnalyzer.swift in Sources */,
 				62DFE4532449FF4E00B34042 /* ViewController.swift in Sources */,
-				62B1B3DB246C040F00BCD1F3 /* ConnectionTimeMeasuring.swift in Sources */,
 				62DFE44F2449FF4E00B34042 /* AppDelegate.swift in Sources */,
-				62397D2624631E4B00480940 /* SimplePing.m in Sources */,
-				62B1B3D424698B5500BCD1F3 /* ICMPConnectionTimeMeasurer.swift in Sources */,
 				62DFE4512449FF4E00B34042 /* SceneDelegate.swift in Sources */,
-				62FA00A0245083C300C57B2F /* ConnectionChecker.swift in Sources */,
 				620D1E26246D64FD006B957D /* Localization+Extensions.swift in Sources */,
-				62A0C4F52457146A00EB4C66 /* TimeMeasurer.swift in Sources */,
-				62B1B3D6246C00BF00BCD1F3 /* AtomicStorage.swift in Sources */,
-				62B1B3D8246C038100BCD1F3 /* DummyConnectionTimeMeasurer.swift in Sources */,
-				62A0C4F124570AFA00EB4C66 /* HTTPConnectionTimeMeasurer.swift in Sources */,
-				62A0C51924587BFC00EB4C66 /* ConnectionQualityMeasurer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andriikym.iConnected;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iConnected/Sources/SimplePing/ConnectionChecker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,7 +477,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andriikym.iConnected;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iConnected/Sources/SimplePing/ConnectionChecker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -586,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62F4D83A2477145D00EF1B23 /* XCRemoteSwiftPackageReference "ConnectionChecker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Andriikym/ConnectionChecker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62F4D83B2477145D00EF1B23 /* ConnectionChecker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62F4D83A2477145D00EF1B23 /* XCRemoteSwiftPackageReference "ConnectionChecker" */;
+			productName = ConnectionChecker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62DFE4432449FF4E00B34042 /* Project object */;
 }
