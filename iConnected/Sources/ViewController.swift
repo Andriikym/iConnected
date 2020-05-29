@@ -10,6 +10,7 @@ import ConnectionChecker
 class ViewController: UIViewController, ConnectionQualityCheckerDelegate {
 
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var versionLabel: UILabel!
     
     lazy var checker: ConnectionQualityChecker = {
         let result = ConnectionQualityChecker()
@@ -19,6 +20,7 @@ class ViewController: UIViewController, ConnectionQualityCheckerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        versionLabel.text = "Version " + Bundle.main.appVersion
         if checker.inProgress {
             infoLabel?.text = "title.main_screen.check_progress".localized
         }
