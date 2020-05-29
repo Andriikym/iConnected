@@ -7,25 +7,33 @@
 import UIKit
 import ConnectionChecker
 
-class ViewController: UIViewController, ConnectionQualityCheckerDelegate {
+class ViewController: UIViewController {
+
+    // MARK: - Outlets
 
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
     
+    // MARK: - Private properties
+
     lazy var checker: ConnectionQualityChecker = {
         let result = ConnectionQualityChecker()
         result.delegate = self
         return result
     }()
     
+    // MARK: - View lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        versionLabel.text = "Version " + Bundle.main.appVersion
+        versionLabel.text = "Version" + " " + Bundle.main.appVersion
         if checker.inProgress {
             infoLabel?.text = "title.main_screen.check_progress".localized
         }
     }
     
+    // MARK: - Actions
+
     @IBAction func go() {
         checker.start()
     }
@@ -33,9 +41,14 @@ class ViewController: UIViewController, ConnectionQualityCheckerDelegate {
     @IBAction func stop() {
         checker.cancel()
     }
-    
+}
+
+// MARK: - ConnectionQualityCheckerDelegate
+
+extension ViewController: ConnectionQualityCheckerDelegate {
     func connectionCheckerDidStart(_ instance: ConnectionQualityChecking) {
-          infoLabel?.text = "title.main_screen.check_progress".localized
+          let progressString = "0%"
+          infoLabel?.text = "title.main_screen.check_progress".localized + " " + progressString
     }
     
     func connectionCheckerDidFinish(result: ConnectionQuality?, instance: ConnectionQualityChecking) {
@@ -43,10 +56,12 @@ class ViewController: UIViewController, ConnectionQualityCheckerDelegate {
     }
     
     func connectionCheckerDidUpdate(progress: Double, instance: ConnectionQualityChecking) {
-        let progressString = " \(progress * 100)%"
-        infoLabel?.text = "title.main_screen.check_progress".localized + progressString
+        let progressString = "\(progress.percentRepresentation)%"
+        infoLabel?.text = "title.main_screen.check_progress".localized + " " + progressString
     }
 }
+
+// MARK: - ShortcutActions
 
 extension ViewController: ShortcutActions {
     func requestToPerformCheck() {

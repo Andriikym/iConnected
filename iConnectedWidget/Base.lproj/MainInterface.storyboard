@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="iConnectedWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PgB-SE-Ew6"/>
+                        <viewControllerLayoutGuide type="bottom" id="vGe-MP-27Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" insetsLayoutMarginsFromSafeArea="NO" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3H-N4-2VM" userLabel="recognizingView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Xel-pe-BQ8" appends="YES" id="6uF-O0-505"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vdB-AJ-PAm">
+                                <rect key="frame" x="80" y="8" width="160" height="76"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceu-dB-RsO">
+                                        <rect key="frame" x="0.0" y="46" width="160" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="action.check.start"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onButton:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="YX1-y4-ZUq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <gestureRecognizers/>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="k3H-N4-2VM" secondAttribute="bottom" id="BTA-ej-7uX"/>
+                            <constraint firstAttribute="trailing" secondItem="k3H-N4-2VM" secondAttribute="trailing" id="NJN-dA-2pq"/>
+                            <constraint firstItem="k3H-N4-2VM" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="NUT-kP-nda"/>
+                            <constraint firstItem="vdB-AJ-PAm" firstAttribute="width" relation="greaterThanOrEqual" secondItem="S3S-Oj-5AN" secondAttribute="width" multiplier="0.5" id="XJ0-3F-Sfx"/>
+                            <constraint firstItem="vdB-AJ-PAm" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="cas-LF-fMN"/>
+                            <constraint firstItem="vdB-AJ-PAm" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="topMargin" constant="8" id="mck-Ad-hkc"/>
+                            <constraint firstItem="k3H-N4-2VM" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="q9t-gM-WTA"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="92"/>
+                    <connections>
+                        <outlet property="actionButton" destination="Ceu-dB-RsO" id="D8T-na-zaK"/>
+                        <outlet property="infoLabel" destination="GcN-lo-r42" id="8P0-y7-ckZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Xel-pe-BQ8">
+                    <connections>
+                        <action selector="onOpen:" destination="M4Y-Lb-cyx" id="Aci-aL-OMy"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+</document>

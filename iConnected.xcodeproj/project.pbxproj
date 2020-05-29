@@ -11,6 +11,15 @@
 		620D1E24246C68F4006B957D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 620D1E1F246C68DB006B957D /* InfoPlist.strings */; };
 		620D1E26246D64FD006B957D /* Localization+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D1E25246D64FD006B957D /* Localization+Extensions.swift */; };
 		620D1E28246D6587006B957D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620D1E27246D6587006B957D /* Main.storyboard */; };
+		627B097B24816D96001E5C75 /* Localization+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D1E25246D64FD006B957D /* Localization+Extensions.swift */; };
+		627B097C24816DC1001E5C75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 620D1E1D246C68DB006B957D /* Localizable.strings */; };
+		627B097E24817E0C001E5C75 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B097D24817E0C001E5C75 /* Double+Extensions.swift */; };
+		627B097F24817E0C001E5C75 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B097D24817E0C001E5C75 /* Double+Extensions.swift */; };
+		62B10F8C24806AB600688657 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B10F8B24806AB600688657 /* NotificationCenter.framework */; };
+		62B10F8F24806AB600688657 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B10F8E24806AB600688657 /* TodayViewController.swift */; };
+		62B10F9224806AB600688657 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B10F9024806AB600688657 /* MainInterface.storyboard */; };
+		62B10F9624806AB600688657 /* iConnectedWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 62B10F8924806AB600688657 /* iConnectedWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		62B10F9C2480777600688657 /* ConnectionChecker in Frameworks */ = {isa = PBXBuildFile; productRef = 62B10F9B2480777600688657 /* ConnectionChecker */; };
 		62DFE44F2449FF4E00B34042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE44E2449FF4E00B34042 /* AppDelegate.swift */; };
 		62DFE4512449FF4E00B34042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE4502449FF4E00B34042 /* SceneDelegate.swift */; };
 		62DFE4532449FF4E00B34042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFE4522449FF4E00B34042 /* ViewController.swift */; };
@@ -28,7 +37,28 @@
 			remoteGlobalIDString = 62DFE44A2449FF4E00B34042;
 			remoteInfo = iConnected;
 		};
+		62B10F9424806AB600688657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62DFE4432449FF4E00B34042 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62B10F8824806AB600688657;
+			remoteInfo = iConnectedWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		62B10F9724806AB600688657 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				62B10F9624806AB600688657 /* iConnectedWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		620D1E1E246C68DB006B957D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -37,7 +67,13 @@
 		620D1E22246C68DB006B957D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		620D1E25246D64FD006B957D /* Localization+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localization+Extensions.swift"; sourceTree = "<group>"; };
 		620D1E27246D6587006B957D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		627B097D24817E0C001E5C75 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		62A0C50824571A0400EB4C66 /* iConnectedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iConnectedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62B10F8924806AB600688657 /* iConnectedWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iConnectedWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		62B10F8B24806AB600688657 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		62B10F8E24806AB600688657 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		62B10F9124806AB600688657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		62B10F9324806AB600688657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DFE44B2449FF4E00B34042 /* iConnected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iConnected.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DFE44E2449FF4E00B34042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DFE4502449FF4E00B34042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +89,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62B10F8624806AB600688657 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62B10F9C2480777600688657 /* ConnectionChecker in Frameworks */,
+				62B10F8C24806AB600688657 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,11 +139,31 @@
 			path = iConnectedTests;
 			sourceTree = "<group>";
 		};
+		62B10F8A24806AB600688657 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62B10F8B24806AB600688657 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62B10F8D24806AB600688657 /* iConnectedWidget */ = {
+			isa = PBXGroup;
+			children = (
+				62B10F8E24806AB600688657 /* TodayViewController.swift */,
+				62B10F9024806AB600688657 /* MainInterface.storyboard */,
+				62B10F9324806AB600688657 /* Info.plist */,
+			);
+			path = iConnectedWidget;
+			sourceTree = "<group>";
+		};
 		62DFE4422449FF4E00B34042 = {
 			isa = PBXGroup;
 			children = (
 				62DFE44D2449FF4E00B34042 /* iConnected */,
 				62A0C50924571A0400EB4C66 /* iConnectedTests */,
+				62B10F8D24806AB600688657 /* iConnectedWidget */,
+				62B10F8A24806AB600688657 /* Frameworks */,
 				62DFE44C2449FF4E00B34042 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +173,7 @@
 			children = (
 				62DFE44B2449FF4E00B34042 /* iConnected.app */,
 				62A0C50824571A0400EB4C66 /* iConnectedTests.xctest */,
+				62B10F8924806AB600688657 /* iConnectedWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +192,7 @@
 			children = (
 				62E90FE024814B65005A32C1 /* Bundle+Extensions.swift */,
 				620D1E25246D64FD006B957D /* Localization+Extensions.swift */,
+				627B097D24817E0C001E5C75 /* Double+Extensions.swift */,
 				62DFE44E2449FF4E00B34042 /* AppDelegate.swift */,
 				62DFE4502449FF4E00B34042 /* SceneDelegate.swift */,
 				620D1E27246D6587006B957D /* Main.storyboard */,
@@ -155,6 +222,26 @@
 			productReference = 62A0C50824571A0400EB4C66 /* iConnectedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		62B10F8824806AB600688657 /* iConnectedWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62B10F9A24806AB600688657 /* Build configuration list for PBXNativeTarget "iConnectedWidget" */;
+			buildPhases = (
+				62B10F8524806AB600688657 /* Sources */,
+				62B10F8624806AB600688657 /* Frameworks */,
+				62B10F8724806AB600688657 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iConnectedWidget;
+			packageProductDependencies = (
+				62B10F9B2480777600688657 /* ConnectionChecker */,
+			);
+			productName = iConnectedWidget;
+			productReference = 62B10F8924806AB600688657 /* iConnectedWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		62DFE44A2449FF4E00B34042 /* iConnected */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62DFE45F2449FF4F00B34042 /* Build configuration list for PBXNativeTarget "iConnected" */;
@@ -162,10 +249,12 @@
 				62DFE4472449FF4E00B34042 /* Sources */,
 				62DFE4482449FF4E00B34042 /* Frameworks */,
 				62DFE4492449FF4E00B34042 /* Resources */,
+				62B10F9724806AB600688657 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				62B10F9524806AB600688657 /* PBXTargetDependency */,
 			);
 			name = iConnected;
 			packageProductDependencies = (
@@ -188,6 +277,9 @@
 					62A0C50724571A0400EB4C66 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 62DFE44A2449FF4E00B34042;
+					};
+					62B10F8824806AB600688657 = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
 					62DFE44A2449FF4E00B34042 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -213,6 +305,7 @@
 			targets = (
 				62DFE44A2449FF4E00B34042 /* iConnected */,
 				62A0C50724571A0400EB4C66 /* iConnectedTests */,
+				62B10F8824806AB600688657 /* iConnectedWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +315,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62B10F8724806AB600688657 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62B10F9224806AB600688657 /* MainInterface.storyboard in Resources */,
+				627B097C24816DC1001E5C75 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +349,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		62B10F8524806AB600688657 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				627B097F24817E0C001E5C75 /* Double+Extensions.swift in Sources */,
+				627B097B24816D96001E5C75 /* Localization+Extensions.swift in Sources */,
+				62B10F8F24806AB600688657 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62DFE4472449FF4E00B34042 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627B097E24817E0C001E5C75 /* Double+Extensions.swift in Sources */,
 				62DFE4532449FF4E00B34042 /* ViewController.swift in Sources */,
 				62E90FE124814B65005A32C1 /* Bundle+Extensions.swift in Sources */,
 				62DFE44F2449FF4E00B34042 /* AppDelegate.swift in Sources */,
@@ -266,6 +379,11 @@
 			isa = PBXTargetDependency;
 			target = 62DFE44A2449FF4E00B34042 /* iConnected */;
 			targetProxy = 62A0C50D24571A0400EB4C66 /* PBXContainerItemProxy */;
+		};
+		62B10F9524806AB600688657 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62B10F8824806AB600688657 /* iConnectedWidget */;
+			targetProxy = 62B10F9424806AB600688657 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -286,6 +404,14 @@
 				620D1E22246C68DB006B957D /* ru */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		62B10F9024806AB600688657 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62B10F9124806AB600688657 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		62DFE4592449FF4F00B34042 /* LaunchScreen.storyboard */ = {
@@ -334,6 +460,48 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iConnected.app/iConnected";
+			};
+			name = Release;
+		};
+		62B10F9824806AB600688657 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = iConnectedWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andriikym.iConnected.iConnectedWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62B10F9924806AB600688657 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = iConnectedWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andriikym.iConnected.iConnectedWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -454,14 +622,16 @@
 		62DFE4602449FF4F00B34042 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "iConnected/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andriikym.iConnected;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -473,14 +643,16 @@
 		62DFE4612449FF4F00B34042 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "iConnected/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andriikym.iConnected;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -497,6 +669,15 @@
 			buildConfigurations = (
 				62A0C51024571A0400EB4C66 /* Debug */,
 				62A0C51124571A0400EB4C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62B10F9A24806AB600688657 /* Build configuration list for PBXNativeTarget "iConnectedWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62B10F9824806AB600688657 /* Debug */,
+				62B10F9924806AB600688657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -533,6 +714,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		62B10F9B2480777600688657 /* ConnectionChecker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62F4D83A2477145D00EF1B23 /* XCRemoteSwiftPackageReference "ConnectionChecker" */;
+			productName = ConnectionChecker;
+		};
 		62F4D83B2477145D00EF1B23 /* ConnectionChecker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 62F4D83A2477145D00EF1B23 /* XCRemoteSwiftPackageReference "ConnectionChecker" */;
